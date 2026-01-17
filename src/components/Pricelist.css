@@ -1,0 +1,148 @@
+.pricelist {
+    background-color: var(--color-bg);
+    padding: var(--spacing-xl) 0;
+}
+
+.pricelist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: var(--spacing-lg);
+    justify-content: center;
+}
+
+.price-card {
+    background: var(--color-bg);
+    border-radius: var(--radius-md);
+    padding: 30px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.price-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(0, 102, 255, 0.1);
+}
+
+.price-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient-main);
+    opacity: 0;
+    transition: var(--transition-fast);
+}
+
+.price-card:hover::before {
+    opacity: 1;
+}
+
+.price-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.follower-count {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+    margin-bottom: 5px;
+    font-family: var(--font-main);
+}
+
+.follower-label {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.price-body {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.price-amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 20px;
+}
+
+.price-features {
+    list-style: none;
+    text-align: left;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+.price-features li {
+    margin-bottom: 12px;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-features i {
+    color: #10B981;
+    /* Success Green */
+    font-size: 1.1rem;
+}
+
+.price-footer {
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--gradient-main);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 102, 255, 0.2);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 8px 25px rgba(0, 102, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.w-full {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}

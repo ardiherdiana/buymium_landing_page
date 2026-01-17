@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Buymium Landing Page (Next.js Version)
 
-## Getting Started
+Landing page premium untuk platform jual beli akun Instagram, Buymium. Telah dimigrasikan dari React (Vite) ke Next.js App Router.
 
-First, run the development server:
+## Fitur Utama
+- **Desain Premium**: Tampilan modern dengan palet warna biru profesional.
+- **Responsif**: Tampilan optimal di desktop, tablet, dan mobile.
+- **Pricelist Section**: Daftar paket harga dengan desain kartu interaktif.
+- **WhatsApp Integration**: Tombol CTA yang terhubung langsung ke WhatsApp CS.
+- **Optimasi**: Menggunakan `next/image` dan font `next/font` untuk performa tinggi.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Tech Stack
+- **Framework**: [Next.js 15+](https://nextjs.org/) (App Router)
+- **Library**: [React 19](https://react.dev/)
+- **Styling**: Native CSS (CSS Modules & Global CSS)
+- **Icons**: Font Awesome 6
+- **Font**: Google Fonts (Outfit)
+
+## Struktur Project
+File sumber utama (komponen, assets) berada di folder `src/` untuk memudahkan pengelolaan, sedangkan routing dan layout berada di `app/`.
+
+```
+buymium_landing_page/
+├── app/                    # App Router files
+│   ├── layout.tsx          # Root layout & Metadata
+│   ├── page.tsx            # Main entry point (renders App)
+│   └── icon.png            # Favicon
+├── src/
+│   ├── components/         # React components (Navbar, Hero, etc.)
+│   ├── assets/             # Images & Logos
+│   ├── App.tsx             # Main Application Component
+│   └── index.css           # Global Styles & Animations
+└── public/                 # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Cara Menjalankan (Local)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Jalankan Development Server**
+   ```bash
+   npm run dev
+   ```
 
-## Learn More
+3. **Buka Browser**
+   Buka [http://localhost:3000](http://localhost:3000) untuk melihat aplikasi.
 
-To learn more about Next.js, take a look at the following resources:
+## Cara Hosting (Deploy)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Cara termudah dan terbaik untuk men-deploy aplikasi Next.js adalah menggunakan **Vercel** (pembuat Next.js).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Opsi 1: Deploy dengan Vercel (Rekomendasi)
 
-## Deploy on Vercel
+1. **Push ke GitHub/GitLab/Bitbucket**
+   - Pastikan kode Anda sudah di-push ke repository git.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Daftar/Login ke Vercel**
+   - Buka [vercel.com](https://vercel.com) dan login.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Import Project**
+   - Klik tombol **"Add New..."** -> **"Project"**.
+   - Cari repository `buymium_landing_page` Anda dan klik **Import**.
+
+4. **Konfigurasi**
+   - **Framework Preset**: Next.js (biasanya otomatis terdeteksi).
+   - **Root Directory**: Jika repository Anda menyatukan 2 project, pastikan memilih folder `buymium_landing_page` sebagai root. Jika repository hanya berisi folder ini, biarkan default `./`.
+
+5. **Deploy**
+   - Klik **Deploy**. Tunggu beberapa saat hingga proses build selesai.
+   - Website Anda akan live dengan domain `*.vercel.app`.
+
+### Opsi 2: Deploy ke VPS / Node.js Hosting
+
+Jika Anda ingin hosting di server sendiri (seperti DigitalOcean, atau hosting cPanel yang support Node.js):
+
+1. **Build Project**
+   ```bash
+   npm run build
+   ```
+
+2. **Start Server**
+   ```bash
+   npm start
+   ```
+   Aplikasi akan berjalan di port 3000. Anda perlu setup Reverse Proxy (Nginx/Apache) untuk mengarahkan domain Anda ke port tersebut.
+
+---
+
+&copy; 2026 Buymium. All rights reserved.

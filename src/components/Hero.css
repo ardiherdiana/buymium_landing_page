@@ -1,0 +1,155 @@
+.hero {
+    padding: 180px 0 120px;
+    background-color: var(--color-bg);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mesh Gradient Background */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--gradient-mesh);
+    opacity: 0.4;
+    z-index: 1;
+    filter: blur(80px);
+    /* Soften the mesh */
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: white;
+    border-radius: var(--radius-pill);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: 1px solid rgba(0, 102, 255, 0.1);
+}
+
+.hero-badge i {
+    color: var(--color-accent);
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    /* Larger */
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.1;
+    letter-spacing: -2px;
+    background: linear-gradient(135deg, #0F172A 30%, #0066FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-lg);
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+.hero-cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+    box-shadow: 0 10px 20px -5px rgba(37, 211, 102, 0.4);
+}
+
+.btn-whatsapp:hover {
+    background-color: #1FAF5E;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px -5px rgba(37, 211, 102, 0.5);
+}
+
+.btn-shopee {
+    background-color: #EE4D2D;
+    color: white;
+    box-shadow: 0 10px 20px -5px rgba(238, 77, 45, 0.4);
+}
+
+.btn-shopee:hover {
+    background-color: #D33B1D;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px -5px rgba(238, 77, 45, 0.5);
+}
+
+/* Floating Elements for Decoration */
+.hero-decoration {
+    position: absolute;
+    font-size: 2rem;
+    color: var(--color-primary);
+    opacity: 0.1;
+    z-index: 1;
+    animation: float 6s ease-in-out infinite;
+}
+
+.dec-1 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+    font-size: 3rem;
+}
+
+.dec-2 {
+    top: 30%;
+    right: 15%;
+    animation-delay: 2s;
+    font-size: 4rem;
+}
+
+.dec-3 {
+    bottom: 20%;
+    left: 15%;
+    animation-delay: 1s;
+    font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 140px 0 80px;
+    }
+
+    .hero-title {
+        font-size: 2.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-badge {
+        margin-bottom: var(--spacing-sm);
+    }
+}

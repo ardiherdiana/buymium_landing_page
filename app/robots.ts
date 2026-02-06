@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://buymium.store/sitemap.xml',
+        sitemap: 'https://buymium.id/sitemap.xml',
     };
 }

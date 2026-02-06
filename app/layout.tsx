@@ -23,7 +23,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://buymium.store'),
+  metadataBase: new URL('https://buymium.id'),
   title: {
     default: "Jual Akun Instagram & Followers Real Indonesia Terpercaya | Buymium",
     template: "%s | Buymium"
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Buymium - Pusat Jual Beli Akun Instagram Terpercaya",
     description: "Cari akun Instagram siap pakai untuk bisnis? Buymium solusinya! Akun aged, followers aktif Indonesia, dan bergaransi. Cek stok sekarang!",
-    url: 'https://buymium.store',
+    url: 'https://buymium.id',
     siteName: 'Buymium',
     images: [
       {
@@ -81,10 +81,10 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://buymium.store/#organization",
+      "@id": "https://buymium.id/#organization",
       "name": "Buymium",
-      "url": "https://buymium.store",
-      "logo": "https://buymium.store/buymium_logo.png",
+      "url": "https://buymium.id",
+      "logo": "https://buymium.id/buymium_logo.png",
       "sameAs": [
         "https://instagram.com/buymium.store",
         "https://www.shopee.co.id/buymium.store"
@@ -99,12 +99,12 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://buymium.store/#website",
-      "url": "https://buymium.store",
+      "@id": "https://buymium.id/#website",
+      "url": "https://buymium.id",
       "name": "Buymium",
       "description": "Platform Jual Beli Akun Instagram Terpercaya di Indonesia",
       "publisher": {
-        "@id": "https://buymium.store/#organization"
+        "@id": "https://buymium.id/#organization"
       },
       "inLanguage": "id-ID"
     }

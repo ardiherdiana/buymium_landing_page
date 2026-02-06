@@ -62,7 +62,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="https://www.buymium.store"
+                                    href="https://www.buymium.id"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="footer-link"

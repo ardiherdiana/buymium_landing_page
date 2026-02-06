@@ -2,7 +2,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://buymium.store';
+    const baseUrl = 'https://buymium.id';
 
     // In a real application, you might fetch dynamic routes from a database here
     // For a landing page, we just list the main pages.
